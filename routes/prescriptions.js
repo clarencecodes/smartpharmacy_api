@@ -1,40 +1,21 @@
-const { Router } = require('express');
 const express = require('express');
+
+const {
+  getPrescriptions,
+  getPrescription,
+  createPrescription,
+  updatePrescription,
+  deletePrescription,
+} = require('../controllers/prescriptions');
+
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.status(200).json({ success: true, msg: 'Get all prescriptions' });
-});
+router.route('/').get(getPrescriptions).post(createPrescription);
 
-router.get('/:patientQueueNumber', (req, res) => {
-    res
-        .status(200)
-        .json({
-            success: true,
-            msg: `Get prescription for patient queue no. ${req.params.patientQueueNumber}`,
-        });
-});
-
-router.post('/', (req, res) => {
-    res.status(200).json({ success: true, msg: 'Create new prescription' });
-});
-
-router.put('/:patientQueueNumber', (req, res) => {
-    res
-        .status(200)
-        .json({
-            success: true,
-            msg: `Update prescription for patient queue no. ${req.params.patientQueueNumber}`,
-        });
-});
-
-router.delete('/:patientQueueNumber', (req, res) => {
-    res
-        .status(200)
-        .json({
-            success: true,
-            msg: `Delete prescription for patient queue no. ${req.params.patientQueueNumber}`,
-        });
-});
+router
+  .route('/:patientQueueNumber')
+  .get(getPrescription)
+  .put(updatePrescription)
+  .delete(deletePrescription);
 
 module.exports = router;
