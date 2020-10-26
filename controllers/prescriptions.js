@@ -18,6 +18,11 @@ exports.getPrescriptions = async (req, res, next) => {
 exports.getPrescription = async (req, res, next) => {
   try {
     const prescription = await Prescription.findById(req.params.id);
+
+    if (!prescription) {
+      return res.status(400).json({ success: false });
+    }
+
     res.status(200).json({ success: true, data: prescription });
   } catch (err) {
     res.status(400).json({ success: false });
@@ -39,19 +44,28 @@ exports.createPrescription = async (req, res, next) => {
 // @desc    Update prescription
 // @route   PUT /api/v1/prescriptions/:id
 // @access  Private
-exports.updatePrescription = (req, res, next) => {
-  res.status(200).json({
-    success: true,
-    msg: `Update prescription ${req.params.id}`,
-  });
+exports.updatePrescription = async (req, res, next) => {
+  try {
+    const prescription = await Prescription.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      {
+        new: true,
+        runValidators: true,
+      }
+    );
+
+    if (!prescription) {
+      return res.status(400).json({ success: false });
+    }
+
+    res.status(200).json({ success: true, data: prescription });
+  } catch (err) {
+    res.status(400).json({ success: false });
+  }
 };
 
 // @desc    Delete prescription
 // @route   DELETE /api/v1/prescriptions/:id
 // @access  Private
-exports.deletePrescription = (req, res, next) => {
-  res.status(200).json({
-    success: true,
-    msg: `Delete prescription ${req.params.id}`,
-  });
-};
+exports.deletePrescription = async (req, res, next) => {};
