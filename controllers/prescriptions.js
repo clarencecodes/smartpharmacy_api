@@ -6,7 +6,11 @@ const Prescription = require('../models/Prescription');
 exports.getPrescriptions = async (req, res, next) => {
   try {
     const prescriptions = await Prescription.find();
-    res.status(200).json({ success: true, data: prescriptions });
+    res.status(200).json({
+      success: true,
+      count: prescriptions.length,
+      data: prescriptions,
+    });
   } catch (err) {
     res.status(400).json({ success: false });
   }
@@ -68,4 +72,16 @@ exports.updatePrescription = async (req, res, next) => {
 // @desc    Delete prescription
 // @route   DELETE /api/v1/prescriptions/:id
 // @access  Private
-exports.deletePrescription = async (req, res, next) => {};
+exports.deletePrescription = async (req, res, next) => {
+  try {
+    const prescription = await Prescription.findByIdAndDelete(req.params.id);
+
+    if (!prescription) {
+      return res.status(400).json({ success: false });
+    }
+
+    res.status(200).json({ success: true, data: {} });
+  } catch (err) {
+    res.status(400).json({ success: false });
+  }
+};
