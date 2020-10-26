@@ -13,7 +13,7 @@ const router = express.Router();
 router.route('/').get(getPrescriptions).post(createPrescription);
 
 router
-  .route('/:patientQueueNumber')
+  .route('/:id')
   .get(getPrescription)
   .put(updatePrescription)
   .delete(deletePrescription);
