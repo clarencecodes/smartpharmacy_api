@@ -1,3 +1,5 @@
+const Prescription = require('../models/Prescription');
+
 // @desc    Get all prescriptions
 // @route   GET /api/v1/prescriptions
 // @access  Private
@@ -18,8 +20,13 @@ exports.getPrescription = (req, res, next) => {
 // @desc    Create new prescription
 // @route   POST /api/v1/prescriptions
 // @access  Private
-exports.createPrescription = (req, res, next) => {
-  res.status(200).json({ success: true, msg: 'Create new prescription' });
+exports.createPrescription = async (req, res, next) => {
+  try {
+    const prescription = await Prescription.create(req.body);
+    res.status(201).json({ success: true, data: prescription });
+  } catch (err) {
+    res.status(400).json({ success: false });
+  }
 };
 
 // @desc    Update prescription
