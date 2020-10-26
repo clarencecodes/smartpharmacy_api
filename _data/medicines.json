@@ -1,0 +1,42 @@
+[
+    {
+        "_id": "5d713995b721c3bb38c1f5d0",
+        "name": "Atorvastatin Calcium",
+        "description": "Atorvastatin, sold under the brand name Lipitor among others, is a statin medication used to prevent cardiovascular disease in those at high risk and treat abnormal lipid levels. For the prevention of cardiovascular disease, statins are a first-line treatment. It is taken by mouth.",
+        "stock": 1000,
+        "stockType": "tablets",
+        "cabinetDrawer": 1
+    },
+    {
+        "_id": "5d713a66ec8f2b88b8f830b8",
+        "name": "Levothyroxine",
+        "description": "Levothyroxine, also known as L-thyroxine, is a manufactured form of the thyroid hormone thyroxine. It is used to treat thyroid hormone deficiency, including the severe form known as myxedema coma. It may also be used to treat and prevent certain types of thyroid tumors. It is not indicated for weight loss.",
+        "stock": 700,
+        "stockType": "tablets",
+        "cabinetDrawer": 2
+    },
+    {
+        "_id": "5d725a037b292f5f8ceff787",
+        "name": "Lisinopril",
+        "description": "Lisinopril is a medication of the angiotensin-converting enzyme inhibitor class used to treat high blood pressure, heart failure, and after heart attacks. For high blood pressure it is usually a first line treatment. It is also used to prevent kidney problems in people with diabetes mellitus.",
+        "stock": 500,
+        "stockType": "tablets",
+        "cabinetDrawer": 3
+    },
+    {
+        "_id": "5d725a1b7b292f5f8ceff788",
+        "name": "Omeprazole",
+        "description": "Omeprazole, sold under the brand names Prilosec and Losec among others, is a medication used in the treatment of gastroesophageal reflux disease, peptic ulcer disease, and Zollinger–Ellison syndrome. It is also used to prevent upper gastrointestinal bleeding in people who are at high risk.",
+        "stock": 800,
+        "stockType": "tablets",
+        "cabinetDrawer": 4
+    },
+    {
+        "_id": "5d725a4a7b292f5f8ceff789",
+        "name": "Metformin",
+        "description": "Metformin, marketed under the trade name Glucophage among others, is the first-line medication for the treatment of type 2 diabetes, particularly in people who are overweight. It is also used in the treatment of polycystic ovary syndrome. It is not associated with weight gain. It is taken by mouth.",
+        "stock": 400,
+        "stockType": "tablets",
+        "cabinetDrawer": 5
+    }
+]
