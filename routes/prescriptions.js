@@ -6,6 +6,7 @@ const {
   createPrescription,
   updatePrescription,
   deletePrescription,
+  dispensePrescription,
 } = require('../controllers/prescriptions');
 
 const router = express.Router();
@@ -17,5 +18,7 @@ router
   .get(getPrescription)
   .put(updatePrescription)
   .delete(deletePrescription);
+
+router.route('/dispense/:id').put(dispensePrescription);
 
 module.exports = router;

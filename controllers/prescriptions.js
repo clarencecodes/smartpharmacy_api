@@ -85,3 +85,15 @@ exports.deletePrescription = async (req, res, next) => {
     res.status(400).json({ success: false });
   }
 };
+
+// @desc    Dispense prescription
+// @route   PUT /api/v1/prescriptions/dispense/:id
+// @access  Private
+exports.dispensePrescription = async (req, res, next) => {
+  // Check if there is enough medicine to be dispensed and update stock levels
+  // Set prescription dispenseStatus to 'dispensed'
+  // Return the relevant drawers
+  res
+    .status(200)
+    .json({ success: true, msg: `prescription ${req.params.id} dispensed` });
+};
