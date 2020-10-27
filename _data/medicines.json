@@ -54,5 +54,14 @@
             "5d7a514b5d2c12c7449be023",
             "5d7a514b5d2c12c7449be024"
         ]
+    },
+    {
+        "_id": "5d725a4a7b292f5f8ceff790",
+        "name": "Dextromethorphan",
+        "description": "Dextromethorphan is a medication most often used as a cough suppressant in over-the-counter cold and cough medicines. It is sold in syrup, tablet, spray, and lozenge forms. It is in the morphinan class of medications with sedative, dissociative, and stimulant properties.",
+        "stock": 50,
+        "medicineType": "bottles",
+        "cabinetDrawerIndex": 5,
+        "currentPrescriptions": []
     }
 ]
