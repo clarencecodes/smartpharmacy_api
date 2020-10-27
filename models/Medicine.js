@@ -30,6 +30,10 @@ const MedicineSchema = new mongoose.Schema({
     min: [0, 'Cabinet drawer index cannot be less than 0'],
     max: [15, 'Cabinet drawer index cannot be more than 15'],
   },
+  currentPrescriptions: {
+    type: [mongoose.Schema.ObjectId],
+    ref: 'Prescription',
+  },
 });
 
 module.exports = mongoose.model('Medicine', MedicineSchema);

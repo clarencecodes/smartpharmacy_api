@@ -6,7 +6,8 @@ const PrescriptionSchema = new mongoose.Schema({
     default: new Date(Date.now() - 1000 * 60 * 15), // set the admission date & time to be 15 minutes ago
   },
   medicines: {
-    type: [String],
+    type: [mongoose.Schema.ObjectId],
+    ref: 'Medicine',
     required: true,
   },
   dispenseStatus: {

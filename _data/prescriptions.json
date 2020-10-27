@@ -1,0 +1,50 @@
+[
+    {
+        "_id": "5d7a514b5d2c12c7449be020",
+        "patientAdmissionDateAndTime": "2020-10-26T15:29:22.837Z",
+        "medicines": [
+            "5d713995b721c3bb38c1f5d0"
+        ],
+        "dispenseStatus": "new",
+        "doctorsRemarks": "Fever while training"
+    },
+    {
+        "_id": "5d7a514b5d2c12c7449be021",
+        "patientAdmissionDateAndTime": "2020-10-26T15:29:22.837Z",
+        "medicines": [
+            "5d713995b721c3bb38c1f5d0",
+            "5d725a037b292f5f8ceff787"
+        ],
+        "dispenseStatus": "new",
+        "doctorsRemarks": "High blood pressure"
+    },
+    {
+        "_id": "5d7a514b5d2c12c7449be022",
+        "patientAdmissionDateAndTime": "2020-10-26T15:29:22.837Z",
+        "medicines": [
+            "5d725a4a7b292f5f8ceff789",
+            "5d725a1b7b292f5f8ceff788"
+        ],
+        "dispenseStatus": "new",
+        "doctorsRemarks": "Vomit really badly"
+    },
+    {
+        "_id": "5d7a514b5d2c12c7449be023",
+        "patientAdmissionDateAndTime": "2020-10-26T15:29:22.837Z",
+        "medicines": [
+            "5d713995b721c3bb38c1f5d0",
+            "5d725a4a7b292f5f8ceff789"
+        ],
+        "dispenseStatus": "new",
+        "doctorsRemarks": "COVID-19 suspect"
+    },
+    {
+        "_id": "5d7a514b5d2c12c7449be024",
+        "patientAdmissionDateAndTime": "2020-10-26T15:29:22.837Z",
+        "medicines": [
+            "5d725a4a7b292f5f8ceff789"
+        ],
+        "dispenseStatus": "new",
+        "doctorsRemarks": "Dengue fever"
+    }
+]
