@@ -27,8 +27,8 @@ const MedicineSchema = new mongoose.Schema({
     type: Number,
     unique: true,
     required: true,
-    min: [1, 'Cabinet drawer index cannot be less than 0'],
-    max: [16, 'Cabinet drawer index cannot be more than 15'],
+    min: [0, 'Cabinet drawer index cannot be less than 0'],
+    max: [15, 'Cabinet drawer index cannot be more than 15'],
   },
 });
 
