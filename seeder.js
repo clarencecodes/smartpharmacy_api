@@ -2,8 +2,11 @@ const fs = require('fs');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 
-// Load env vars
-dotenv.config({ path: './config/config.env' });
+// Load env vars only in dev mode
+// Production/Heroku has its own config vars
+if (process.env.NODE_ENV === 'development') {
+  dotenv.config({ path: './config/config.env' });
+}
 
 // Load models
 const Medicine = require('./models/Medicine');
