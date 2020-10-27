@@ -18,9 +18,9 @@ const MedicineSchema = new mongoose.Schema({
       'Please specify the current medicine stock available in the cabinet drawer',
     ],
   },
-  stockType: {
+  medicineType: {
     type: String,
-    required: [true, 'Please specify the stock type (tablets or bottles)'],
+    required: [true, 'Please specify the medicine type (tablets or bottles)'],
     enum: ['tablets', 'bottles'],
   },
   cabinetDrawer: {
