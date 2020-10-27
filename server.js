@@ -1,11 +1,11 @@
 const express = require('express');
-const dotenv = require('dotenv');
 const morgan = require('morgan');
 const connectDB = require('./config/db');
 
 // Load env vars only in dev mode
 // Production/Heroku has its own config vars
 if (process.env.NODE_ENV === 'development') {
+  const dotenv = require('dotenv');
   dotenv.config({ path: './config/config.env' });
 }
 
