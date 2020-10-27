@@ -1,6 +1,7 @@
 [
     {
         "_id": "5d7a514b5d2c12c7449be020",
+        "patientQueueNumber": "A101",
         "patientAdmissionDateAndTime": "2020-10-26T15:29:22.837Z",
         "medicines": [
             "5d713995b721c3bb38c1f5d0"
@@ -10,6 +11,7 @@
     },
     {
         "_id": "5d7a514b5d2c12c7449be021",
+        "patientQueueNumber": "A102",
         "patientAdmissionDateAndTime": "2020-10-26T15:29:22.837Z",
         "medicines": [
             "5d713995b721c3bb38c1f5d0",
@@ -20,6 +22,7 @@
     },
     {
         "_id": "5d7a514b5d2c12c7449be022",
+        "patientQueueNumber": "A103",
         "patientAdmissionDateAndTime": "2020-10-26T15:29:22.837Z",
         "medicines": [
             "5d725a4a7b292f5f8ceff789",
@@ -30,6 +33,7 @@
     },
     {
         "_id": "5d7a514b5d2c12c7449be023",
+        "patientQueueNumber": "A104",
         "patientAdmissionDateAndTime": "2020-10-26T15:29:22.837Z",
         "medicines": [
             "5d713995b721c3bb38c1f5d0",
@@ -40,6 +44,7 @@
     },
     {
         "_id": "5d7a514b5d2c12c7449be024",
+        "patientQueueNumber": "A105",
         "patientAdmissionDateAndTime": "2020-10-26T15:29:22.837Z",
         "medicines": [
             "5d725a4a7b292f5f8ceff789"
