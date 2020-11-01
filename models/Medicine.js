@@ -23,16 +23,16 @@ const MedicineSchema = new mongoose.Schema({
     required: [true, 'Please specify the medicine type (tablets or bottles)'],
     enum: ['tablets', 'bottles'],
   },
+  dosage: {
+    type: Number,
+    default: 20,
+  },
   cabinetDrawerIndex: {
     type: Number,
     unique: true,
     required: true,
     min: [0, 'Cabinet drawer index cannot be less than 0'],
     max: [15, 'Cabinet drawer index cannot be more than 15'],
-  },
-  currentPrescriptions: {
-    type: [mongoose.Schema.ObjectId],
-    ref: 'Prescription',
   },
 });
 

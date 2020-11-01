@@ -5,12 +5,7 @@
         "description": "Atorvastatin, sold under the brand name Lipitor among others, is a statin medication used to prevent cardiovascular disease in those at high risk and treat abnormal lipid levels. For the prevention of cardiovascular disease, statins are a first-line treatment. It is taken by mouth.",
         "stock": 1000,
         "medicineType": "tablets",
-        "cabinetDrawerIndex": 0,
-        "currentPrescriptions": [
-            "5d7a514b5d2c12c7449be020",
-            "5d7a514b5d2c12c7449be021",
-            "5d7a514b5d2c12c7449be023"
-        ]
+        "cabinetDrawerIndex": 0
     },
     {
         "_id": "5d713a66ec8f2b88b8f830b8",
@@ -26,10 +21,7 @@
         "description": "Lisinopril is a medication of the angiotensin-converting enzyme inhibitor class used to treat high blood pressure, heart failure, and after heart attacks. For high blood pressure it is usually a first line treatment. It is also used to prevent kidney problems in people with diabetes mellitus.",
         "stock": 500,
         "medicineType": "tablets",
-        "cabinetDrawerIndex": 2,
-        "currentPrescriptions": [
-            "5d7a514b5d2c12c7449be021"
-        ]
+        "cabinetDrawerIndex": 2
     },
     {
         "_id": "5d725a1b7b292f5f8ceff788",
@@ -37,10 +29,7 @@
         "description": "Omeprazole, sold under the brand names Prilosec and Losec among others, is a medication used in the treatment of gastroesophageal reflux disease, peptic ulcer disease, and Zollinger–Ellison syndrome. It is also used to prevent upper gastrointestinal bleeding in people who are at high risk.",
         "stock": 800,
         "medicineType": "tablets",
-        "cabinetDrawerIndex": 3,
-        "currentPrescriptions": [
-            "5d7a514b5d2c12c7449be022"
-        ]
+        "cabinetDrawerIndex": 3
     },
     {
         "_id": "5d725a4a7b292f5f8ceff789",
@@ -48,12 +37,7 @@
         "description": "Metformin, marketed under the trade name Glucophage among others, is the first-line medication for the treatment of type 2 diabetes, particularly in people who are overweight. It is also used in the treatment of polycystic ovary syndrome. It is not associated with weight gain. It is taken by mouth.",
         "stock": 400,
         "medicineType": "tablets",
-        "cabinetDrawerIndex": 4,
-        "currentPrescriptions": [
-            "5d7a514b5d2c12c7449be022",
-            "5d7a514b5d2c12c7449be023",
-            "5d7a514b5d2c12c7449be024"
-        ]
+        "cabinetDrawerIndex": 4
     },
     {
         "_id": "5d725a4a7b292f5f8ceff790",
@@ -62,6 +46,6 @@
         "stock": 50,
         "medicineType": "bottles",
         "cabinetDrawerIndex": 5,
-        "currentPrescriptions": []
+        "dosage": 1
     }
 ]
