@@ -47,5 +47,95 @@
         "medicineType": "bottles",
         "cabinetDrawerIndex": 5,
         "dosage": 1
+    },
+    {
+        "_id": "5d725a4a7b292f5f8ceff791",
+        "name": "Amlodipine",
+        "description": "Amlodipine, sold under the brand name Norvasc among others, is a medication used to treat high blood pressure and coronary artery disease. While not typically recommended in heart failure, amlodipine may be used if other medications are not sufficient for treating high blood pressure or heart-related chest pain.",
+        "stock": 200,
+        "medicineType": "tablets",
+        "cabinetDrawerIndex": 6,
+        "dosage": 20
+    },
+    {
+        "_id": "5d725a4a7b292f5f8ceff792",
+        "name": "Simvastatin",
+        "description": "Simvastatin, sold under the brand name Zocor among others, is a lipid-lowering medication. It is used along with exercise, diet, and weight loss to decrease elevated lipid levels. It is also used to decrease the risk of heart problems in those at high risk. It is taken by mouth.",
+        "stock": 300,
+        "medicineType": "tablets",
+        "cabinetDrawerIndex": 7,
+        "dosage": 20
+    },
+    {
+        "_id": "5d725a4a7b292f5f8ceff793",
+        "name": "Hydrocodone-Acetaminophen",
+        "description": "Hydrocodone/paracetamol, also known as hydrocodone/acetaminophen, is the combination of the pain medications hydrocodone and paracetamol. It is used to treat moderate to severe pain. It is taken by mouth. Recreational use is common in the United States.",
+        "stock": 500,
+        "medicineType": "tablets",
+        "cabinetDrawerIndex": 8,
+        "dosage": 20
+    },
+    {
+        "_id": "5d725a4a7b292f5f8ceff794",
+        "name": "Metoprolol ER",
+        "description": "Metoprolol, marketed under the tradename Lopressor among others, is a selective β₁ receptor blocker medication. It is used to treat high blood pressure, chest pain due to poor blood flow to the heart, and a number of conditions involving an abnormally fast heart rate.",
+        "stock": 500,
+        "medicineType": "tablets",
+        "cabinetDrawerIndex": 9,
+        "dosage": 20
+    },
+    {
+        "_id": "5d725a4a7b292f5f8ceff795",
+        "name": "Losartan",
+        "description": "Losartan, sold under the trade name Cozaar among others, is a medication mainly used to treat high blood pressure. It is also used for diabetic kidney disease, heart failure, and left ventricular enlargement. It is taken by mouth. It may be used alone or in addition to other blood pressure medication.",
+        "stock": 400,
+        "medicineType": "tablets",
+        "cabinetDrawerIndex": 10,
+        "dosage": 20
+    },
+    {
+        "_id": "5d725a4a7b292f5f8ceff796",
+        "name": "Azithromycin",
+        "description": "Azithromycin is an antibiotic used for the treatment of a number of bacterial infections. This includes middle ear infections, strep throat, pneumonia, traveler's diarrhea, and certain other intestinal infections.",
+        "stock": 600,
+        "medicineType": "tablets",
+        "cabinetDrawerIndex": 11,
+        "dosage": 20
+    },
+    {
+        "_id": "5d725a4a7b292f5f8ceff797",
+        "name": "Zolpidem",
+        "description": "Zolpidem, sold under the brand name Ambien, among others, is a medication primarily used for the short-term treatment of sleeping problems. Guidelines recommend that it be used only after cognitive behavioral therapy for insomnia and behavioral changes, such as sleep hygiene, have been tried.",
+        "stock": 300,
+        "medicineType": "tablets",
+        "cabinetDrawerIndex": 12,
+        "dosage": 20
+    },
+    {
+        "_id": "5d725a4a7b292f5f8ceff798",
+        "name": "Hydrochlorothiazide",
+        "description": "Hydrochlorothiazide is a diuretic medication often used to treat high blood pressure and swelling due to fluid build up. Other uses include treating diabetes insipidus and renal tubular acidosis and to decrease the risk of kidney stones in those with a high calcium level in the urine.",
+        "stock": 350,
+        "medicineType": "tablets",
+        "cabinetDrawerIndex": 13,
+        "dosage": 20
+    },
+    {
+        "_id": "5d725a4a7b292f5f8ceff799",
+        "name": "Furosemide",
+        "description": "Furosemide, sold under the brand name Lasix among others, is a medication used to treat fluid build-up due to heart failure, liver scarring, or kidney disease. It may also be used for the treatment of high blood pressure. It can be taken by injection into a vein or by mouth.",
+        "stock": 200,
+        "medicineType": "tablets",
+        "cabinetDrawerIndex": 14,
+        "dosage": 20
+    },
+    {
+        "_id": "5d725a4a7b292f5f8ceff800",
+        "name": "Metoprolol",
+        "description": "Metoprolol, marketed under the tradename Lopressor among others, is a selective β₁ receptor blocker medication. It is used to treat high blood pressure, chest pain due to poor blood flow to the heart, and a number of conditions involving an abnormally fast heart rate.",
+        "stock": 500,
+        "medicineType": "tablets",
+        "cabinetDrawerIndex": 15,
+        "dosage": 20
     }
 ]
