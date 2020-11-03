@@ -5,14 +5,16 @@ const Medicine = require('../models/Medicine');
 // @access  Private
 exports.getMedicines = async (req, res, next) => {
   try {
-    const medicines = await Medicine.find();
+    const medicines = await Medicine.find().sort([
+      ['cabinetDrawerIndex', 'ascending'],
+    ]);
     res.status(200).json({
       success: true,
       count: medicines.length,
       data: medicines,
     });
   } catch (err) {
-    res.status(400).json({ success: false });
+    res.status(400).json({ success: false, message: String(err) });
   }
 };
 
