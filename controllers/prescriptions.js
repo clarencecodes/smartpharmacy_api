@@ -28,7 +28,21 @@ exports.getPrescription = async (req, res, next) => {
       return res.status(400).json({ success: false });
     }
 
-    res.status(200).json({ success: true, data: prescription });
+    const medicineIds = prescription.medicines;
+
+    var medicines = [];
+    for (var i = 0; i < medicineIds.length; i++) {
+      let medicine = await Medicine.findById(medicineIds[i]);
+      medicines.push(medicine);
+    }
+
+    res.status(200).json({
+      success: true,
+      data: {
+        prescription: prescription,
+        medicines: medicines,
+      },
+    });
   } catch (err) {
     res.status(400).json({ success: false });
   }
