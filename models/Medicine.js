@@ -18,6 +18,13 @@ const MedicineSchema = new mongoose.Schema({
       'Please specify the current medicine stock available in the cabinet drawer',
     ],
   },
+  maxStock: {
+    type: Number,
+    required: [
+      true,
+      'Please specify the maximum medicine stock that the cabinet drawer can hold',
+    ],
+  },
   medicineType: {
     type: String,
     required: [true, 'Please specify the medicine type (tablets or bottles)'],

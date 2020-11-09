@@ -4,6 +4,7 @@
         "name": "Atorvastatin Calcium",
         "description": "Atorvastatin, sold under the brand name Lipitor among others, is a statin medication used to prevent cardiovascular disease in those at high risk and treat abnormal lipid levels. For the prevention of cardiovascular disease, statins are a first-line treatment. It is taken by mouth.",
         "stock": 1000,
+        "maxStock": 1000,
         "medicineType": "tablets",
         "cabinetDrawerIndex": 0
     },
@@ -12,6 +13,7 @@
         "name": "Levothyroxine",
         "description": "Levothyroxine, also known as L-thyroxine, is a manufactured form of the thyroid hormone thyroxine. It is used to treat thyroid hormone deficiency, including the severe form known as myxedema coma. It may also be used to treat and prevent certain types of thyroid tumors. It is not indicated for weight loss.",
         "stock": 700,
+        "maxStock": 1000,
         "medicineType": "tablets",
         "cabinetDrawerIndex": 1
     },
@@ -20,6 +22,7 @@
         "name": "Lisinopril",
         "description": "Lisinopril is a medication of the angiotensin-converting enzyme inhibitor class used to treat high blood pressure, heart failure, and after heart attacks. For high blood pressure it is usually a first line treatment. It is also used to prevent kidney problems in people with diabetes mellitus.",
         "stock": 500,
+        "maxStock": 1000,
         "medicineType": "tablets",
         "cabinetDrawerIndex": 2
     },
@@ -28,6 +31,7 @@
         "name": "Omeprazole",
         "description": "Omeprazole, sold under the brand names Prilosec and Losec among others, is a medication used in the treatment of gastroesophageal reflux disease, peptic ulcer disease, and Zollinger–Ellison syndrome. It is also used to prevent upper gastrointestinal bleeding in people who are at high risk.",
         "stock": 800,
+        "maxStock": 1000,
         "medicineType": "tablets",
         "cabinetDrawerIndex": 3
     },
@@ -36,6 +40,7 @@
         "name": "Metformin",
         "description": "Metformin, marketed under the trade name Glucophage among others, is the first-line medication for the treatment of type 2 diabetes, particularly in people who are overweight. It is also used in the treatment of polycystic ovary syndrome. It is not associated with weight gain. It is taken by mouth.",
         "stock": 400,
+        "maxStock": 1000,
         "medicineType": "tablets",
         "cabinetDrawerIndex": 4
     },
@@ -44,6 +49,7 @@
         "name": "Dextromethorphan",
         "description": "Dextromethorphan is a medication most often used as a cough suppressant in over-the-counter cold and cough medicines. It is sold in syrup, tablet, spray, and lozenge forms. It is in the morphinan class of medications with sedative, dissociative, and stimulant properties.",
         "stock": 50,
+        "maxStock": 1000,
         "medicineType": "bottles",
         "cabinetDrawerIndex": 5,
         "dosage": 1
@@ -53,6 +59,7 @@
         "name": "Amlodipine",
         "description": "Amlodipine, sold under the brand name Norvasc among others, is a medication used to treat high blood pressure and coronary artery disease. While not typically recommended in heart failure, amlodipine may be used if other medications are not sufficient for treating high blood pressure or heart-related chest pain.",
         "stock": 200,
+        "maxStock": 1000,
         "medicineType": "tablets",
         "cabinetDrawerIndex": 6,
         "dosage": 20
@@ -62,6 +69,7 @@
         "name": "Simvastatin",
         "description": "Simvastatin, sold under the brand name Zocor among others, is a lipid-lowering medication. It is used along with exercise, diet, and weight loss to decrease elevated lipid levels. It is also used to decrease the risk of heart problems in those at high risk. It is taken by mouth.",
         "stock": 300,
+        "maxStock": 1000,
         "medicineType": "tablets",
         "cabinetDrawerIndex": 7,
         "dosage": 20
@@ -71,6 +79,7 @@
         "name": "Hydrocodone-Acetaminophen",
         "description": "Hydrocodone/paracetamol, also known as hydrocodone/acetaminophen, is the combination of the pain medications hydrocodone and paracetamol. It is used to treat moderate to severe pain. It is taken by mouth. Recreational use is common in the United States.",
         "stock": 500,
+        "maxStock": 1000,
         "medicineType": "tablets",
         "cabinetDrawerIndex": 8,
         "dosage": 20
@@ -80,6 +89,7 @@
         "name": "Metoprolol ER",
         "description": "Metoprolol, marketed under the tradename Lopressor among others, is a selective β₁ receptor blocker medication. It is used to treat high blood pressure, chest pain due to poor blood flow to the heart, and a number of conditions involving an abnormally fast heart rate.",
         "stock": 500,
+        "maxStock": 1000,
         "medicineType": "tablets",
         "cabinetDrawerIndex": 9,
         "dosage": 20
@@ -89,6 +99,7 @@
         "name": "Losartan",
         "description": "Losartan, sold under the trade name Cozaar among others, is a medication mainly used to treat high blood pressure. It is also used for diabetic kidney disease, heart failure, and left ventricular enlargement. It is taken by mouth. It may be used alone or in addition to other blood pressure medication.",
         "stock": 400,
+        "maxStock": 1000,
         "medicineType": "tablets",
         "cabinetDrawerIndex": 10,
         "dosage": 20
@@ -98,6 +109,7 @@
         "name": "Azithromycin",
         "description": "Azithromycin is an antibiotic used for the treatment of a number of bacterial infections. This includes middle ear infections, strep throat, pneumonia, traveler's diarrhea, and certain other intestinal infections.",
         "stock": 600,
+        "maxStock": 1000,
         "medicineType": "tablets",
         "cabinetDrawerIndex": 11,
         "dosage": 20
@@ -107,6 +119,7 @@
         "name": "Zolpidem",
         "description": "Zolpidem, sold under the brand name Ambien, among others, is a medication primarily used for the short-term treatment of sleeping problems. Guidelines recommend that it be used only after cognitive behavioral therapy for insomnia and behavioral changes, such as sleep hygiene, have been tried.",
         "stock": 300,
+        "maxStock": 1000,
         "medicineType": "tablets",
         "cabinetDrawerIndex": 12,
         "dosage": 20
@@ -116,6 +129,7 @@
         "name": "Hydrochlorothiazide",
         "description": "Hydrochlorothiazide is a diuretic medication often used to treat high blood pressure and swelling due to fluid build up. Other uses include treating diabetes insipidus and renal tubular acidosis and to decrease the risk of kidney stones in those with a high calcium level in the urine.",
         "stock": 350,
+        "maxStock": 1000,
         "medicineType": "tablets",
         "cabinetDrawerIndex": 13,
         "dosage": 20
@@ -125,6 +139,7 @@
         "name": "Furosemide",
         "description": "Furosemide, sold under the brand name Lasix among others, is a medication used to treat fluid build-up due to heart failure, liver scarring, or kidney disease. It may also be used for the treatment of high blood pressure. It can be taken by injection into a vein or by mouth.",
         "stock": 200,
+        "maxStock": 1000,
         "medicineType": "tablets",
         "cabinetDrawerIndex": 14,
         "dosage": 20
@@ -134,6 +149,7 @@
         "name": "Metoprolol",
         "description": "Metoprolol, marketed under the tradename Lopressor among others, is a selective β₁ receptor blocker medication. It is used to treat high blood pressure, chest pain due to poor blood flow to the heart, and a number of conditions involving an abnormally fast heart rate.",
         "stock": 500,
+        "maxStock": 1000,
         "medicineType": "tablets",
         "cabinetDrawerIndex": 15,
         "dosage": 20
