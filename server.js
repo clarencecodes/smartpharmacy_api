@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
+const cors = require('cors');
 
 // Load env vars
 dotenv.config({ path: './config/config.env' });
@@ -14,6 +15,9 @@ const prescriptions = require('./routes/prescriptions');
 const medicines = require('./routes/medicines');
 
 const app = express();
+
+// CORS middleware
+app.use(cors());
 
 // Body parser
 app.use(express.json());
