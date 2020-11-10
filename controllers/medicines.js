@@ -61,6 +61,20 @@ exports.updateMedicine = async (req, res, next) => {
       return res.status(400).json({ success: false });
     }
 
+    let updatedStock = req.body.stock;
+    if (updatedStock > medicine.maxStock) {
+      res.status(400).json({
+        success: false,
+        msg:
+          'Please enter a stock that is less than or equal to the maximum stock.',
+      });
+    } else if (updatedStock < 0) {
+      res.status(400).json({
+        success: false,
+        msg: 'Please enter a stock that is more than 0.',
+      });
+    }
+
     res.status(200).json({ success: true, data: medicine });
   } catch (err) {
     res.status(400).json({ success: false });
