@@ -58,7 +58,7 @@
         "_id": "5d725a4a7b292f5f8ceff791",
         "name": "Amlodipine",
         "description": "Amlodipine, sold under the brand name Norvasc among others, is a medication used to treat high blood pressure and coronary artery disease. While not typically recommended in heart failure, amlodipine may be used if other medications are not sufficient for treating high blood pressure or heart-related chest pain.",
-        "stock": 200,
+        "stock": 80,
         "maxStock": 1000,
         "medicineType": "tablets",
         "cabinetDrawerIndex": 6,
