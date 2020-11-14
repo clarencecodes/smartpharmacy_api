@@ -51,5 +51,17 @@
         ],
         "dispenseStatus": "new",
         "doctorsRemarks": "Dengue fever"
+    },
+    {
+        "_id": "5d7a514b5d2c12c7449be025",
+        "patientQueueNumber": "A106",
+        "patientAdmissionDateAndTime": "2020-10-26T15:29:22.837Z",
+        "medicines": [
+            "5d725a4a7b292f5f8ceff797",
+            "5d725a4a7b292f5f8ceff792",
+            "5d725a4a7b292f5f8ceff795"
+        ],
+        "dispenseStatus": "reviewed",
+        "doctorsRemarks": "Flu and cough"
     }
 ]
