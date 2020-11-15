@@ -175,3 +175,58 @@ exports.dispensePrescription = async (req, res, next) => {
     data: medicinesArr,
   });
 };
+
+// @desc    Undo dispensation of prescription
+// @route   PUT /api/v1/prescriptions/undoDispense/:id
+// @access  Private
+exports.undoDispensePrescription = async (req, res, next) => {
+  try {
+    const prescription = await Prescription.findById(req.params.id);
+
+    if (!prescription) {
+      return res.status(400).json({
+        success: false,
+        msg: `Unable to find prescription with id ${req.params.id}`,
+      });
+    }
+
+    if (prescription['dispenseStatus'] != 'dispensed') {
+      return res.status(400).json({
+        success: false,
+        msg: `Prescription ${req.params.id} is not dispensed yet. There is no need to undo dispensation.`,
+      });
+    }
+
+    const medicineIds = prescription['medicines'];
+
+    // Set the stock levels of each medicine to its previous stock levels before dispensation
+    for (var i = 0; i < medicineIds.length; i++) {
+      let id = medicineIds[i];
+      let medicine = await Medicine.findById(id);
+      await medicine.update(
+        {
+          stock: medicine['stock'] + medicine['dosage'],
+        },
+        {
+          new: true,
+          runValidators: true,
+        }
+      );
+    }
+
+    // Set the prescription status back to 'new'
+    await prescription.update(
+      {
+        dispenseStatus: 'new',
+      },
+      {
+        new: true,
+        runValidators: true,
+      }
+    );
+
+    res.status(200).json({ success: true, data: prescription });
+  } catch (err) {
+    res.status(400).json({ success: false });
+  }
+};
