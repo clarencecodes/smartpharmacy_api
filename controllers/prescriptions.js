@@ -225,7 +225,12 @@ exports.undoDispensePrescription = async (req, res, next) => {
       }
     );
 
-    res.status(200).json({ success: true, data: prescription });
+    res
+      .status(200)
+      .json({
+        success: true,
+        msg: `Dispensing of prescription ${req.params.id} has been undone.`,
+      });
   } catch (err) {
     res.status(400).json({ success: false });
   }
