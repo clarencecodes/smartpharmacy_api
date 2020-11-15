@@ -49,7 +49,7 @@
         "medicines": [
             "5d725a4a7b292f5f8ceff789"
         ],
-        "dispenseStatus": "new",
+        "dispenseStatus": "reviewed",
         "doctorsRemarks": "Dengue fever"
     },
     {
@@ -59,9 +59,9 @@
         "medicines": [
             "5d725a4a7b292f5f8ceff797",
             "5d725a4a7b292f5f8ceff792",
-            "5d725a4a7b292f5f8ceff795"
+            "5d725a4a7b292f5f8ceff790"
         ],
-        "dispenseStatus": "reviewed",
+        "dispenseStatus": "new",
         "doctorsRemarks": "Flu and cough"
     }
 ]

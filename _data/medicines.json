@@ -52,7 +52,7 @@
         "maxStock": 100,
         "medicineType": "bottles",
         "cabinetDrawerIndex": 5,
-        "dosage": 1
+        "dosage": 10
     },
     {
         "_id": "5d725a4a7b292f5f8ceff791",
