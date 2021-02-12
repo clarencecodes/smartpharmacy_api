@@ -1,7 +1,7 @@
 {
-  "name": "medicine_dispensary_system_api",
+  "name": "smartpharmacy_api",
   "version": "1.0.0",
-  "description": "Medicine Dispensary System Backend API",
+  "description": "SmartPharmacy API",
   "main": "server.js",
   "scripts": {
     "start": "NODE_ENV=production node server",
