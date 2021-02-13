@@ -5,7 +5,12 @@ const MedicineDosage = require('../models/MedicineDosage');
 // @access  Private
 exports.getMedicineDosages = async (req, res, next) => {
   try {
-    const medicineDosages = await MedicineDosage.find();
+    const medicineDosages = await MedicineDosage.find()
+      .populate({
+        path: 'medicine',
+        model: 'Medicine',
+      })
+      .exec();
     res.status(200).json({
       success: true,
       count: medicineDosages.length,
@@ -21,7 +26,12 @@ exports.getMedicineDosages = async (req, res, next) => {
 // @access  Private
 exports.getMedicineDosage = async (req, res, next) => {
   try {
-    const medicineDosage = await MedicineDosage.findById(req.params.id);
+    const medicineDosage = await MedicineDosage.findById(req.params.id)
+      .populate({
+        path: 'medicine',
+        model: 'Medicine',
+      })
+      .exec();
 
     if (!medicineDosage) {
       return res.status(400).json({ success: false });
