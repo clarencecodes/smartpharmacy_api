@@ -1,3 +1,4 @@
+const { populate } = require('../models/Medicine');
 const Medicine = require('../models/Medicine');
 const Prescription = require('../models/Prescription');
 
@@ -6,7 +7,17 @@ const Prescription = require('../models/Prescription');
 // @access  Private
 exports.getPrescriptions = async (req, res, next) => {
   try {
-    const prescriptions = await Prescription.find();
+    const prescriptions = await Prescription.find()
+      .populate({
+        path: 'medicineDosages',
+        model: 'MedicineDosage',
+        populate: {
+          path: 'medicine',
+          model: 'Medicine',
+        },
+      })
+      .exec();
+
     res.status(200).json({
       success: true,
       count: prescriptions.length,
@@ -22,25 +33,25 @@ exports.getPrescriptions = async (req, res, next) => {
 // @access  Private
 exports.getPrescription = async (req, res, next) => {
   try {
-    const prescription = await Prescription.findById(req.params.id);
+    const prescription = await Prescription.findById(req.params.id)
+      .populate({
+        path: 'medicineDosages',
+        model: 'MedicineDosage',
+        populate: {
+          path: 'medicine',
+          model: 'Medicine',
+        },
+      })
+      .exec();
 
     if (!prescription) {
       return res.status(400).json({ success: false });
-    }
-
-    const medicineIds = prescription.medicines;
-
-    var medicines = [];
-    for (var i = 0; i < medicineIds.length; i++) {
-      let medicine = await Medicine.findById(medicineIds[i]);
-      medicines.push(medicine);
     }
 
     res.status(200).json({
       success: true,
       data: {
         prescription: prescription,
-        medicines: medicines,
       },
     });
   } catch (err) {
@@ -225,12 +236,10 @@ exports.undoDispensePrescription = async (req, res, next) => {
       }
     );
 
-    res
-      .status(200)
-      .json({
-        success: true,
-        msg: `Dispensing of prescription ${req.params.id} has been undone.`,
-      });
+    res.status(200).json({
+      success: true,
+      msg: `Dispensing of prescription ${req.params.id} has been undone.`,
+    });
   } catch (err) {
     res.status(400).json({ success: false });
   }

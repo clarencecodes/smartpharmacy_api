@@ -10,9 +10,9 @@ const PrescriptionSchema = new mongoose.Schema({
     unique: true,
     required: true,
   },
-  medicines: {
+  medicineDosages: {
     type: [mongoose.Schema.ObjectId],
-    ref: 'Medicine',
+    ref: 'MedicineDosage',
     required: true,
   },
   dispenseStatus: {

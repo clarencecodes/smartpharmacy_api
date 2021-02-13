@@ -13,6 +13,7 @@ connectDB();
 // Route files
 const prescriptions = require('./routes/prescriptions');
 const medicines = require('./routes/medicines');
+const medicineDosages = require('./routes/medicineDosages');
 const auth = require('./routes/auth');
 
 const app = express();
@@ -34,6 +35,7 @@ if (process.env.NODE_ENV === 'development') {
 // Mount routers
 app.use('/api/v1/prescriptions', prescriptions);
 app.use('/api/v1/medicines', medicines);
+app.use('/api/v1/medicineDosages', medicineDosages);
 app.use('/api/v1/auth', auth);
 
 const PORT = process.env.PORT || 5000;

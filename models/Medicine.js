@@ -30,10 +30,6 @@ const MedicineSchema = new mongoose.Schema({
     required: [true, 'Please specify the medicine type (tablets or bottles)'],
     enum: ['tablets', 'bottles'],
   },
-  dosage: {
-    type: Number,
-    default: 20,
-  },
   cabinetDrawerIndex: {
     type: Number,
     unique: true,

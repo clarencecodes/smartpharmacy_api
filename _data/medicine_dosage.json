@@ -1,0 +1,27 @@
+[
+    {
+        "_id": "6027fd0d7528d2e8d217495a",
+        "medicine": "5d713a66ec8f2b88b8f830b8",
+        "dosage": 30
+    },
+    {
+        "_id": "6027fd4ea3eee533f2f73c9d",
+        "medicine": "5d713a66ec8f2b88b8f830b8",
+        "dosage": 40
+    },
+    {
+        "_id": "6027fd6300a242bf44291548",
+        "medicine": "5d725a4a7b292f5f8ceff790",
+        "dosage": 1
+    },
+    {
+        "_id": "6027fd8a21ed3190e898589c",
+        "medicine": "5d725a4a7b292f5f8ceff799",
+        "dosage": 10
+    },
+    {
+        "_id": "6027fdaead6d19dfd78eda55",
+        "medicine": "5d725a4a7b292f5f8ceff798",
+        "dosage": 15
+    }
+]
