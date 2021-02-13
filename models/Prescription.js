@@ -5,6 +5,11 @@ const PrescriptionSchema = new mongoose.Schema({
     type: Date,
     default: new Date(Date.now() - 1000 * 60 * 15), // set the admission date & time to be 15 minutes ago
   },
+  patientName: {
+    type: String,
+    maxlength: [100, 'Name cannot be more than 100 characters'],
+    required: true,
+  },
   patientQueueNumber: {
     type: Number,
     unique: true,
