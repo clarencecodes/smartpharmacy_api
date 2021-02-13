@@ -1,3 +1,4 @@
+const e = require('express');
 const MedicineDosage = require('../models/MedicineDosage');
 
 // @desc    Get all medicine dosages
@@ -48,13 +49,27 @@ exports.getMedicineDosage = async (req, res, next) => {
 // @access  Private
 exports.createMedicineDosage = async (req, res, next) => {
   try {
-    const medicineDosage = await MedicineDosage.create(req.body);
+    // Find an existing medicineDosage with the specified medicine id and dosage quantity
+    const existingMedicineDosage = await MedicineDosage.findOne({
+      medicine: req.body.medicine,
+      dosage: req.body.dosage,
+    });
 
-    if (!medicineDosage) {
+    // If it exists, return it without creating a new one
+    if (existingMedicineDosage) {
+      return res
+        .status(200)
+        .json({ success: true, data: existingMedicineDosage });
+    }
+
+    // If it doesn't exist, create a new one and return it in the response
+    const newMedicineDosage = await MedicineDosage.create(req.body);
+
+    if (!newMedicineDosage) {
       return res.status(400).json({ success: false });
     }
 
-    res.status(200).json({ success: true, data: medicineDosage });
+    return res.status(200).json({ success: true, data: newMedicineDosage });
   } catch (err) {
     res.status(400).json({ success: false });
   }
