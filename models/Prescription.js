@@ -18,7 +18,7 @@ const PrescriptionSchema = new mongoose.Schema({
   dispenseStatus: {
     type: String,
     required: true,
-    enum: ['new', 'dispensed', 'review', 'reviewed'],
+    enum: ['new', 'dispensed', 'reviewing', 'reviewed'],
   },
   doctorsRemarks: {
     type: String,
