@@ -32,3 +32,20 @@ exports.getMedicineDosage = async (req, res, next) => {
     res.status(400).json({ success: false });
   }
 };
+
+// @desc    Create medicine dosage
+// @route   POST /api/v1/medicineDosages
+// @access  Private
+exports.createMedicineDosage = async (req, res, next) => {
+  try {
+    const medicineDosage = await MedicineDosage.create(req.body);
+
+    if (!medicineDosage) {
+      return res.status(400).json({ success: false });
+    }
+
+    res.status(200).json({ success: true, data: medicineDosage });
+  } catch (err) {
+    res.status(400).json({ success: false });
+  }
+};
