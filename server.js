@@ -17,6 +17,9 @@ const auth = require('./routes/auth');
 
 const app = express();
 
+// Set static folder
+app.use(express.static('public'));
+
 // CORS middleware
 app.use(cors());
 
