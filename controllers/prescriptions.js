@@ -2,7 +2,6 @@ const { populate } = require('../models/Medicine');
 const Medicine = require('../models/Medicine');
 const Prescription = require('../models/Prescription');
 const firebaseAdmin = require('firebase-admin');
-const firebaseServiceAccount = require('../config/smartpharmacy-59fac-firebase-adminsdk-3e1nk-ad3507a115.json');
 
 // @desc    Get all prescriptions
 // @route   GET /api/v1/prescriptions

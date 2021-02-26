@@ -4,7 +4,6 @@ const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 const cors = require('cors');
 const firebaseAdmin = require('firebase-admin');
-const firebaseServiceAccount = require('./config/smartpharmacy-59fac-firebase-adminsdk-3e1nk-ad3507a115.json');
 
 // Load env vars
 dotenv.config({ path: './config/config.env' });
@@ -36,7 +35,9 @@ if (process.env.NODE_ENV === 'development') {
 
 // Initialize firebase
 firebaseAdmin.initializeApp({
-  credential: firebaseAdmin.credential.cert(firebaseServiceAccount),
+  credential: firebaseAdmin.credential.cert(
+    JSON.parse(process.env.FIREBASE_CREDENTIALS)
+  ),
 });
 
 // Mount routers
