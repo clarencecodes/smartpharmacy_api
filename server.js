@@ -3,6 +3,8 @@ const morgan = require('morgan');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 const cors = require('cors');
+const firebaseAdmin = require('firebase-admin');
+const firebaseServiceAccount = require('./config/smartpharmacy-59fac-firebase-adminsdk-3e1nk-ad3507a115.json');
 
 // Load env vars
 dotenv.config({ path: './config/config.env' });
@@ -31,6 +33,11 @@ app.use(express.json());
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
+
+// Initialize firebase
+firebaseAdmin.initializeApp({
+  credential: firebaseAdmin.credential.cert(firebaseServiceAccount),
+});
 
 // Mount routers
 app.use('/api/v1/prescriptions', prescriptions);

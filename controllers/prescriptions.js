@@ -1,6 +1,8 @@
 const { populate } = require('../models/Medicine');
 const Medicine = require('../models/Medicine');
 const Prescription = require('../models/Prescription');
+const firebaseAdmin = require('firebase-admin');
+const firebaseServiceAccount = require('../config/smartpharmacy-59fac-firebase-adminsdk-3e1nk-ad3507a115.json');
 
 // @desc    Get all prescriptions
 // @route   GET /api/v1/prescriptions
@@ -65,6 +67,31 @@ exports.getPrescription = async (req, res, next) => {
 exports.createPrescription = async (req, res, next) => {
   try {
     const prescription = await Prescription.create(req.body);
+
+    if (!prescription) {
+      return res.status(400).json({ success: false });
+    }
+
+    // activate FCM notification
+    const topic = 'general';
+    const message = {
+      notification: {
+        title: 'New Prescription',
+        body: 'A new prescription has been added. Dispense it now!',
+      },
+      topic: topic,
+    };
+    firebaseAdmin
+      .messaging()
+      .send(message)
+      .then(response => {
+        // Response is a message ID string.
+        console.log('Successfully sent message:', response);
+      })
+      .catch(error => {
+        console.log('Error sending message:', error);
+      });
+
     res.status(201).json({ success: true, data: prescription });
   } catch (err) {
     res.status(400).json({ success: false });
