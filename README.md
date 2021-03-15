@@ -39,6 +39,7 @@ Ensure that you have the following installed:
    PORT=5000
    
    MONGO_URI=<your mongodb connection string>
+   FIREBASE_CREDENTIALS=<your minified firebase credentials for FCM notification>
    ```
 
 ## Seeding the database
