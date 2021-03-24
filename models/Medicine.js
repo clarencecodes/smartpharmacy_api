@@ -17,6 +17,7 @@ const MedicineSchema = new mongoose.Schema({
       true,
       'Please specify the current medicine stock available in the cabinet drawer',
     ],
+    min: [0, 'Current stock levels cannot be less than 0'],
   },
   maxStock: {
     type: Number,
