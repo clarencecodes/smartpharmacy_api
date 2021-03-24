@@ -81,6 +81,43 @@ exports.updateMedicine = async (req, res, next) => {
   }
 };
 
+// @desc    Batch update medicines
+// @route   POST /api/v1/medicines/batch-update
+// @access  Private
+exports.batchUpdateMedicines = async (req, res, next) => {
+  try {
+    const medicines = req.body.medicines;
+    var updatedMedicines = [];
+    for (i = 0; i < medicines.length; i++) {
+      const medicine = await Medicine.findByIdAndUpdate(
+        medicines[i]._id,
+        medicines[i],
+        {
+          new: true,
+          runValidators: true,
+        }
+      );
+
+      if (!medicine) {
+        return res.status(400).json({
+          success: false,
+          msg: `Unable to find and update medicine with _id ${medicines[i]._id}`,
+        });
+      }
+      updatedMedicines.push(medicine);
+    }
+    res
+      .status(200)
+      .json({
+        success: true,
+        msg: 'Medicines updated.',
+        data: updatedMedicines,
+      });
+  } catch (err) {
+    res.status(400).json({ success: false });
+  }
+};
+
 // @desc    Delete medicine
 // @route   DELETE /api/v1/medicines/:id
 // @access  Private

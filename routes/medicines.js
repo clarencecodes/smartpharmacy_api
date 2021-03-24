@@ -6,6 +6,7 @@ const {
   createMedicine,
   updateMedicine,
   deleteMedicine,
+  batchUpdateMedicines,
 } = require('../controllers/medicines');
 
 const router = express.Router();
@@ -17,5 +18,7 @@ router
   .get(getMedicine)
   .put(updateMedicine)
   .delete(deleteMedicine);
+
+router.route('/batch-update').post(batchUpdateMedicines);
 
 module.exports = router;
