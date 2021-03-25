@@ -16,7 +16,7 @@ const prescriptions = require('./routes/prescriptions');
 const medicines = require('./routes/medicines');
 const medicineDosages = require('./routes/medicineDosages');
 const auth = require('./routes/auth');
-const pdf = require('./routes/filePdf');
+const pdf = require('./routes/filePDFs');
 
 const app = express();
 

@@ -1,11 +1,11 @@
 const express = require('express');
 
 const {
-    createPDF,
-    getPDFs,
-    getPDF,
-    deletePDF
-} = require('../controllers/filePdf');
+  createPDF,
+  getPDFs,
+  getPDF,
+  deletePDF,
+} = require('../controllers/filePDFs');
 
 const router = express.Router();
 
