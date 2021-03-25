@@ -3,7 +3,10 @@ const mongoose = require('mongoose');
 const PrescriptionSchema = new mongoose.Schema({
   patientAdmissionDateAndTime: {
     type: Date,
-    default: new Date(Date.now() - 1000 * 60 * 15), // set the admission date & time to be 15 minutes ago
+    default: () => {
+      // set the admission date & time to be anytime within the past 30 minutes
+      return Date.now() - Math.random() * (1000 * 60 * 30);
+    },
   },
   patientName: {
     type: String,
