@@ -38,6 +38,15 @@ const MedicineSchema = new mongoose.Schema({
     min: [0, 'Cabinet drawer index cannot be less than 0'],
     max: [15, 'Cabinet drawer index cannot be more than 15'],
   },
+  expiryDate: {
+    type: Date,
+    required: true,
+    min: [Date.now, 'Expiry date cannot be earlier than today.'],
+    default: () => {
+      // set the expiry date & time to be anytime within 2 years
+      return Date.now() + Math.random() * (1000 * 60 * 60 * 24 * 365 * 2);
+    },
+  },
 });
 
 module.exports = mongoose.model('Medicine', MedicineSchema);
