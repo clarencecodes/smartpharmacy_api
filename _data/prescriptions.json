@@ -3,7 +3,6 @@
         "_id": "5d7a514b5d2c12c7449be020",
         "patientName": "Fasiya Ebrahim",
         "patientQueueNumber": 1,
-        "patientAdmissionDateAndTime": "2020-10-26T15:29:22.837Z",
         "medicineDosages": [
             "6027fd0d7528d2e8d217495a",
             "6027fd4ea3eee533f2f73c9d"
@@ -15,7 +14,6 @@
         "_id": "5d7a514b5d2c12c7449be021",
         "patientName": "Rocky Garrett",
         "patientQueueNumber": 2,
-        "patientAdmissionDateAndTime": "2020-10-26T15:29:22.837Z",
         "medicineDosages": [
             "6027fd8a21ed3190e898589c",
             "6027fdaead6d19dfd78eda55"
@@ -27,7 +25,6 @@
         "_id": "5d7a514b5d2c12c7449be022",
         "patientName": "Jin Ichirou",
         "patientQueueNumber": 3,
-        "patientAdmissionDateAndTime": "2020-10-26T15:29:22.837Z",
         "medicineDosages": [
             "6027fd6300a242bf44291548"
         ],
@@ -38,7 +35,6 @@
         "_id": "5d7a514b5d2c12c7449be023",
         "patientName": "Dan Dan",
         "patientQueueNumber": 4,
-        "patientAdmissionDateAndTime": "2020-10-26T15:29:22.837Z",
         "medicineDosages": [
             "6027fd8a21ed3190e898589c"
         ],
@@ -49,7 +45,6 @@
         "_id": "5d7a514b5d2c12c7449be024",
         "patientName": "Junípero Limones",
         "patientQueueNumber": 5,
-        "patientAdmissionDateAndTime": "2020-10-26T15:29:22.837Z",
         "medicineDosages": [
             "6027fdaead6d19dfd78eda55",
             "6027fd4ea3eee533f2f73c9d",
@@ -63,7 +58,6 @@
         "_id": "5d7a514b5d2c12c7449be025",
         "patientName": "Xaver Engel",
         "patientQueueNumber": 6,
-        "patientAdmissionDateAndTime": "2020-10-26T15:29:22.837Z",
         "medicineDosages": [
             "6027fd8a21ed3190e898589c",
             "6027fdaead6d19dfd78eda55"
