@@ -7,14 +7,12 @@ const PDFSchema = new mongoose.Schema({
   },
   createdAt: {
     type: Date,
-    default: Date.now(), // set the admission date & time to be 15 minutes ago
+    default: Date.now(),
   },
-
   fileSize: {
     type: Number,
-    default: 0.0
-},
-  
+    default: 0.0,
+  },
 });
 
 module.exports = mongoose.model('FilePDF', PDFSchema);

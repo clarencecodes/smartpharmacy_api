@@ -9,6 +9,7 @@ dotenv.config({ path: './config/config.env' });
 const Medicine = require('./models/Medicine');
 const Prescription = require('./models/Prescription');
 const MedicineDosage = require('./models/MedicineDosage');
+const FilePDF = require('./models/FilePDF');
 
 // Connect to DB
 mongoose.connect(process.env.MONGO_URI, {
@@ -31,12 +32,17 @@ const medicineDosages = JSON.parse(
   fs.readFileSync(`${__dirname}/_data/medicine_dosage.json`, 'utf-8')
 );
 
+const filePDFs = JSON.parse(
+  fs.readFileSync(`${__dirname}/_data/filePDFs.json`, 'utf-8')
+);
+
 // Import into DB
 const importData = async () => {
   try {
     await Medicine.create(medicines);
     await Prescription.create(prescriptions);
     await MedicineDosage.create(medicineDosages);
+    await FilePDF.create(filePDFs);
 
     console.log('Data Imported...');
     process.exit();
@@ -51,6 +57,7 @@ const deleteData = async () => {
     await Medicine.deleteMany();
     await Prescription.deleteMany();
     await MedicineDosage.deleteMany();
+    await FilePDF.deleteMany();
 
     console.log('Data Destroyed...');
     process.exit();
