@@ -25,22 +25,7 @@ Ensure that you have the following installed:
 
 ## Environment Variables
 
-1. Create a `config.env` file
-
-   ```
-   cd config
-   touch config.env
-   ```
-
-2. Copy and paste the following into the  `config.env` file. Be sure to edit the MongoDB connection string as required.
-
-   ```
-   NODE_ENV=development
-   PORT=5000
-   
-   MONGO_URI=<your mongodb connection string>
-   FIREBASE_CREDENTIALS=<your minified firebase credentials for FCM notification>
-   ```
+Rename `config/config.env.env` to `config/config.env` and update the values/settings to your own.
 
 ## Seeding the database
 
@@ -50,10 +35,9 @@ Ensure that you have the following installed:
 ## Start the server
 
 - `npm run dev` (local, development mode)
--  `npm run start` (local, production mode)
+- `npm run start` (local, production mode)
 
 ## Deploy to Heroku
 
 1. Ensure that you are added as a collaborator to the app in Heroku
 2. `git push heroku master` to deploy
-
