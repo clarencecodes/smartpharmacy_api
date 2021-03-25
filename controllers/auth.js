@@ -43,7 +43,6 @@ exports.login = async (req, res, next) => {
     return res.status(401).json({ success: false, msg: 'Invalid credentials' });
   }
 
-  
   sendTokenResponse(user, 200, res);
 };
 
@@ -87,12 +86,6 @@ exports.updateDetails = async (req, res, next) => {
     new: true,
     runValidators: true,
   });
-  
-  const user = await User.findByIdAndUpdate(req.id, fieldsToUpdate, {
-    new: true,
-    runValidators: true,
-  });
-
 
   res.status(200).json({
     success: true,
@@ -123,6 +116,6 @@ exports.updatePassword = async (req, res, next) => {
 const sendTokenResponse = (user, statusCode, res) => {
   res.status(statusCode).json({
     success: true,
-    data : user
+    data: user,
   });
 };
