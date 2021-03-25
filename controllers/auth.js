@@ -116,5 +116,6 @@ exports.updatePassword = async (req, res, next) => {
 const sendTokenResponse = (user, statusCode, res) => {
   res.status(statusCode).json({
     success: true,
+    data: user,
   });
 };

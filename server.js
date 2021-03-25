@@ -16,6 +16,7 @@ const prescriptions = require('./routes/prescriptions');
 const medicines = require('./routes/medicines');
 const medicineDosages = require('./routes/medicineDosages');
 const auth = require('./routes/auth');
+const pdf = require('./routes/filePDFs');
 
 const app = express();
 
@@ -45,6 +46,7 @@ app.use('/api/v1/prescriptions', prescriptions);
 app.use('/api/v1/medicines', medicines);
 app.use('/api/v1/medicineDosages', medicineDosages);
 app.use('/api/v1/auth', auth);
+app.use('/api/v1/pdf', pdf);
 
 const PORT = process.env.PORT || 5000;
 
