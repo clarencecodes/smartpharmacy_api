@@ -17,7 +17,7 @@ exports.getPrescriptions = async (req, res, next) => {
           model: 'Medicine',
         },
       })
-      .exec();
+      .sort([['patientQueueNumber', 'descending']]);
 
     res.status(200).json({
       success: true,
