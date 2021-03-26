@@ -22,6 +22,10 @@ const PrescriptionSchema = new mongoose.Schema({
     type: [mongoose.Schema.ObjectId],
     ref: 'MedicineDosage',
     required: true,
+    validate: [
+      arrayLimit,
+      'A prescription should contain at least 1 medicine.',
+    ],
   },
   dispenseStatus: {
     type: String,
@@ -33,5 +37,9 @@ const PrescriptionSchema = new mongoose.Schema({
     maxlength: [500, 'Doctors remarks cannot be more than 500 characters'],
   },
 });
+
+function arrayLimit(val) {
+  return val.length >= 1;
+}
 
 module.exports = mongoose.model('Prescription', PrescriptionSchema);
